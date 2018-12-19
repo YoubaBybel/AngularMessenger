@@ -13,7 +13,7 @@ import { ChatService } from './chat/services/chat.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChatModule
+    ChatModule,
   ],
   providers: [
     ChatService

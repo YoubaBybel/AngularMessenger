@@ -1,15 +1,25 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { ChatModule } from './chat/chat.module';
+import { ChatService } from './chat/services/chat.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        BrowserModule,
+        AppRoutingModule,
+        ChatModule
       ],
       declarations: [
         AppComponent
+      ],
+      providers: [
+        ChatService
       ],
     }).compileComponents();
   }));
@@ -30,6 +40,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to AngularMessenger!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to AngularMessenger !');
   });
 });

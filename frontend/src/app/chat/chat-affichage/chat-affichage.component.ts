@@ -7,7 +7,7 @@ import { Message } from '../models/message';
   styleUrls: ['./chat-affichage.component.scss']
 })
 export class ChatAffichageComponent implements OnInit {
-  @Input() messages: Array<Message>;
+  @Input() public messages: Array<Message>;
 
   constructor() { }
 

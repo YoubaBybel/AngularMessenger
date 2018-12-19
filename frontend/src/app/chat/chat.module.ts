@@ -20,7 +20,7 @@ import { ChatFormulaireComponent } from './chat-formulaire/chat-formulaire.compo
     ChatFormulaireComponent
   ],
   exports: [
-    ChatComponent
+    ChatComponent,
   ]
 })
 export class ChatModule { }
